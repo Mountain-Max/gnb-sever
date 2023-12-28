@@ -1,0 +1,148 @@
+.contacts {
+}
+
+.contacts-wrapper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.contacts-title__wrap {
+  margin-bottom: 50px;
+  text-align: center;
+  color: $gray-color;
+  background-color: #ccc;
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    margin-bottom: 30px;
+  }
+
+}
+
+.contacts-card__wrap {
+  display: flex;
+  justify-content: space-between;
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+  }
+}
+
+.contacts-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 70px;
+  align-items: center;
+
+  width: 350px;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    row-gap: 50px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    width: 250px;
+  }
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    row-gap: 30px;
+  }
+}
+
+.contacts-card__name {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  font-size: 34px;
+  font-weight: 700;
+  color: $gray-color;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    font-size: 28px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    font-size: 26px;
+  }
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    font-size: 24px;
+  }
+}
+
+.contacts-card__phone {
+  position: relative;
+  font-size: 28px;
+
+  & a:hover {
+    color: $accent-color;
+  }
+
+  // Tablet
+  @media (max-width: 1199px) {
+    font-size: 26px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    font-size: 24px;
+  }
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    font-size: 22px;
+  }
+
+}
+
+.contacts-card__phone::after {
+  content: "";
+  background-image: url(./../img/svg/phone.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: -50px;
+  top: -9px;
+  width: 30px;
+  height: 30px;
+  transform: translate(50%, 50%);
+
+  // Tablet
+  @media (max-width: 1199px) {
+    width: 26px;
+    height: 26px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    width: 24px;
+    height: 24px;
+  }
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    width: 22px;
+    height: 22px;
+  }
+}

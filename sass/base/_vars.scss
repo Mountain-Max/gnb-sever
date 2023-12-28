@@ -1,0 +1,25 @@
+$accent-color: #dbc823;
+$accent-gray-color: #8c8c8c;
+$background-color: #ccc;
+$black-color: #000;
+$white-color: #fff;
+$gray-color: #535353;
+
+//* nav-icon
+// Ширина и высота линии в иконке
+$lineWidth: 20px;
+$lineHeight: 3px;
+
+// Расстояние между линиями
+$innerMargin: 4px;
+
+// Радиус скругления
+$radiusIcon: 2px;
+
+// Цвет иконки
+$colorIcon: #000;
+
+// Размеры контейнера
+$width: $lineWidth;
+$height: $lineHeight * 3 + $innerMargin * 2;
+//* nav-icon

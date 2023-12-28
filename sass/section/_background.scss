@@ -1,0 +1,38 @@
+.background {
+  // margin-top: 20px;
+  background: linear-gradient(180deg, #fff, $background-color);
+}
+
+.background-wrapper {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 80px;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    padding-bottom: 70px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    padding-top: 20px;
+  }
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    padding-top: 15px;
+    padding-bottom: 60px;
+  }
+}
+
+.background-title {
+  margin-bottom: 20px;
+  color: $gray-color;
+
+  // Mobile
+  @media (max-width: 899px) {
+    margin-bottom: 10px;
+  }
+}
+
+

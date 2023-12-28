@@ -1,0 +1,165 @@
+.benefits {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.benefits-title {
+  text-align: center;
+  margin-bottom: 50px;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
+}
+
+.benefits-wrapper {
+  margin: 0 auto;
+}
+
+.benefits-ithem {
+  position: relative;
+  width: 50%;
+  padding-bottom: 70px;
+
+  // Mobile
+  @media (max-width: 899px) {
+    width: 100%;
+  }
+}
+
+.benefits-ithem::before,
+.benefits-ithem::after {
+  content: "";
+
+  position: absolute;
+}
+
+.benefits-ithem::before {
+  width: 5px;
+  top: 5px;
+  bottom: -6px;
+  background-color: $accent-color;
+}
+
+.benefits-ithem:nth-child(2n + 1) {
+  padding-right: 60px;
+  text-align: right;
+
+  // Mobile
+  @media (max-width: 899px) {
+    text-align: left;
+    padding-left: 60px;
+    padding-right: 0px;
+  }
+}
+
+.benefits-ithem:nth-child(2n + 1)::before {
+  right: 0;
+  transform: translate(50%);
+
+  // Mobile
+  @media (max-width: 899px) {
+    left: 17px;
+    transform: translate(-50%);
+  }
+}
+
+.benefits-ithem:nth-child(2n) {
+  margin-left: auto;
+  padding-left: 60px;
+
+  // Mobile
+  @media (max-width: 899px) {
+    padding-left: 60px;
+  }
+}
+
+.benefits-ithem:nth-child(2n)::before {
+  left: 0;
+  transform: translate(-50%);
+
+  // Mobile
+  @media (max-width: 899px) {
+    left: 17px;
+  }
+}
+
+.benefits-ithem::after {
+  width: 34px;
+  height: 34px;
+  border: 5px solid $accent-color;
+  border-radius: 50%;
+  background-color: $white-color;
+
+  z-index: 9;
+
+  // Mobile
+  @media (max-width: 899px) {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.benefits-ithem:nth-child(2n + 1)::after {
+  top: 0;
+  right: 0;
+  transform: translate(50%, 15%);
+
+  // Mobile
+  @media (max-width: 899px) {
+    left: 17px;
+    transform: translate(-50%, 10%);
+  }
+
+}
+
+.benefits-ithem:nth-child(2n)::after {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, 15%);
+
+  // Mobile
+  @media (max-width: 899px) {
+    left: 17px;
+    transform: translate(-50%, 10%);
+  }
+}
+
+.benefits-ithem:last-child {
+  padding-bottom: 0;
+}
+
+.benefits-ithem:last-child::before {
+  display: none;
+}
+
+.benefits-ithem__title {
+  margin-bottom: 5px;
+}
+
+.benefits-ithem__desc {
+  font-size: 20px;
+
+  // Mobile
+  @media (max-width: 899px) {
+    font-size: 16px;
+  }
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    font-size: 12px;
+  }
+}

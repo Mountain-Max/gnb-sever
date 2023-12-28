@@ -1,0 +1,187 @@
+.nav {
+  display: none;
+  line-height: 1.3;
+}
+
+.nav a {
+  color: #fff;
+  font-size: 25px;
+  margin-right: 0;
+  margin-bottom: 10px;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.nav-top {
+  font-size: 22px;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    font-size: 18px;
+  }
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    display: none;
+  }
+}
+
+.nav-top * + * {
+  padding-left: 15px;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    padding-left: 10px;
+  }
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    justify-content: center;
+    width: 300px;
+  }
+
+}
+
+.nav-link {
+  position: relative;
+  color: $gray-color;
+}
+
+.nav-link::after {
+  position: absolute;
+  content: "";
+
+  height: 3px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: $gray-color;
+  border-radius: 3px;
+  transform: scale(0);
+  transform-origin: center;
+
+  transition: all 0.2s ease-in;
+}
+
+.nav-link:hover {
+  color: $gray-color;
+}
+
+.nav-link:hover::after {
+  transform: scale(1);
+}
+
+.nav-btn {
+  display: none;
+}
+
+@media (max-width: 599px) {
+  .nav {
+    // display: none;
+
+    position: fixed;
+    // top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $gray-color;
+    opacity: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & > * + * {
+      margin-top: 30px;
+    }
+    transition: opacity 0.2s ease-in, top 0s linear 0.2s;
+  }
+
+  .nav.nav--active {
+    top: 0;
+    opacity: 1;
+    transition: top 0s linear, opacity 0.2s ease-in;
+
+    z-index: 99;
+  }
+}
+
+.nav-icon {
+  width: $width;
+  height: $height;
+
+  display: none;
+  align-items: center;
+
+  cursor: pointer;
+
+  z-index: 99;
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    display: flex;
+  }
+}
+
+.nav-icon__middle {
+  position: relative;
+  width: $lineWidth;
+  height: $lineHeight;
+  background-color: $colorIcon;
+  border-radius: $radiusIcon;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: $lineWidth;
+    height: $lineHeight;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    background-color: $colorIcon;
+    border-radius: $radiusIcon;
+  }
+
+  &::before {
+    top: -($lineHeight + $innerMargin);
+  }
+
+  &::after {
+    top: $lineHeight + $innerMargin;
+  }
+}
+
+/* Active state */
+
+.nav-icon.nav-icon--active .nav-icon__middle {
+  background-color: transparent;
+  position: fixed;
+
+  &::before,
+  &::after {
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    background-color: #fff;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    background-color: #fff;
+
+    &:hover {
+      background-color: $accent-color;
+    }
+  }
+}

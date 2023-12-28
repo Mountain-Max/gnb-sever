@@ -1,0 +1,177 @@
+.social-icon > * + * {
+  padding-left: 45px;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    padding-left: 35px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    padding-left: 30px;
+  }
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    padding-left: 25px;
+  }
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+}
+
+.svg-telegram {
+  width: 50px;
+  height: 50px;
+  fill: #039be5;
+
+  &:hover,
+  :focus {
+    fill: #0f74a7;
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in;
+  }
+
+  // Tablet
+  @media (max-width: 1199px) {
+    width: 45px;
+    height: 45px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.svg-vk {
+  width: 50px;
+  height: 50px;
+  fill: #4d76a1;
+
+  &:hover,
+  :focus {
+    fill: #4e6986;
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in;
+  }
+
+  // Tablet
+  @media (max-width: 1199px) {
+    width: 45px;
+    height: 45px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.svg-whatsapp {
+  width: 50px;
+  height: 50px;
+  fill: #55cd6c;
+
+  &:hover,
+  :focus {
+    fill: #49b05d;
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in;
+  }
+
+  // Tablet
+  @media (max-width: 1199px) {
+    width: 45px;
+    height: 45px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.svg-mail {
+  width: 50px;
+  height: 50px;
+  fill: #005ff9;
+
+  &:hover,
+  :focus {
+    fill: #0048bb;
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in;
+  }
+
+  // Tablet
+  @media (max-width: 1199px) {
+    width: 45px;
+    height: 45px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.svg-viber {
+  width: 57px;
+  height: 57px;
+  fill: #7e57c2;
+
+  &:hover,
+  :focus {
+    fill: #5f4390;
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in;
+  }
+
+  // Tablet
+  @media (max-width: 1199px) {
+    width: 53px;
+    height: 53px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.slider-button .icon-circle {
+  fill: $white-color;
+}
+
+.slider-button .icon-path {
+  stroke: $accent-color;
+  stroke-width: 3px;
+}
+
+.slider-button:hover .icon-circle {
+  fill: $accent-color;
+}
+
+.slider-button:hover .icon-path {
+  stroke: $white-color;
+}
